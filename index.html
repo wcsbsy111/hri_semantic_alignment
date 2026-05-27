@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>服务机器人多模态语义对齐系统</title>
+<link rel="stylesheet" href="styles/base.css" />
+<link rel="stylesheet" href="styles/index.css" />
+
+</head>
+<body>
+<div class="container">
+  <section class="hero">
+    <div class="hero-main">
+      <div class="badge">🏠 毕业设计原型 · 多模态语义对齐</div>
+      <h1>服务机器人自然交互中的<br/>语义状态感知系统</h1>
+      <p>本页面只负责采集用户姿态、表情与语音，并把有效状态广播给家庭语义地图场景。任务理解、澄清与执行统一放在场景页处理，避免采集端和执行端重复推理。</p>
+      <div class="hero-actions">
+        <button id="openGameBtn" class="primary-btn">进入家庭语义地图场景 v16</button>
+        <button id="demoVoiceBtn" class="ghost-btn">模拟语音：我想喝水</button>
+        <span id="bridgeStatus" class="status-pill">桥接状态：等待状态池更新</span>
+      </div>
+    </div>
+    <aside class="hero-side">
+      <div class="flow-title">系统流程</div>
+      <div class="flow">
+        <div class="flow-step"><div class="num">1</div><div><b>多模态采样</b><span>姿态、表情、语音以不同频率进入状态池。</span></div></div>
+        <div class="flow-step"><div class="num">2</div><div><b>状态有效性判断</b><span>通过 TTL 过滤过期状态，避免旧动作误导意图推理。</span></div></div>
+        <div class="flow-step"><div class="num">3</div><div><b>语义地图对齐</b><span>将“杯子”等模糊对象映射到家中具体位置、用途和约束。</span></div></div>
+        <div class="flow-step"><div class="num">4</div><div><b>主动澄清</b><span>目标、位置或水温不明确时，机器人先询问再行动。</span></div></div>
+      </div>
+    </aside>
+  </section>
+
+  <main class="workspace">
+    <section class="video-panel">
+      <div class="panel-head">
+        <div><div class="panel-title">实时动作与人脸采集</div><div class="panel-subtitle">PoseNet 骨架检测 + face-api 表情识别</div></div>
+        <div id="cameraDot" class="live-dot">摄像头未启动</div>
+      </div>
+      <div class="video-wrap">
+        <video id="video" width="640" height="480" autoplay playsinline muted></video>
+        <canvas id="canvas" width="640" height="480"></canvas>
+        <div class="scan-frame"></div>
+      </div>
+      <div class="video-footer">
+        <div class="metric"><span>Pose TTL</span><b>1.5s</b></div>
+        <div class="metric"><span>Face TTL</span><b>3s</b></div>
+        <div class="metric"><span>Speech TTL</span><b>10s</b></div>
+      </div>
+    </section>
+
+    <section class="right-stack">
+      <div class="panel">
+        <div class="panel-head"><div><div class="panel-title">人体关键点数据</div><div class="panel-subtitle">实时坐标与置信度</div></div></div>
+        <div class="card-body"><div id="info" class="textbox large">骨骼信息将在这里显示。</div></div>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><div><div class="panel-title">表情识别</div><div class="panel-subtitle">用户情绪辅助判断</div></div></div>
+        <div class="card-body"><div id="faceResult" class="textbox face">表情识别模型加载中...</div></div>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><div><div class="panel-title">动态语义状态池</div><div class="panel-subtitle">Pose / Face / Speech 有效状态</div></div></div>
+        <div class="card-body"><div id="statePoolResult" class="textbox large">等待姿态、表情与语音状态更新...</div></div>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><div><div class="panel-title">语音转文字实时识别</div><div class="panel-subtitle">支持“我想喝水”“拿餐桌上的杯子”等指令</div></div></div>
+        <div class="card-body">
+          <div id="voiceResult" class="textbox voice">点击按钮开始语音识别</div>
+          <div class="action-row"><button id="voiceBtn" class="tool-btn green">开始语音识别</button><button id="clearVoiceBtn" class="tool-btn">清空语音状态</button></div>
+          <div class="tag-row"><span class="tag">DRINK_WATER_REQUEST</span><span class="tag">HOT_WATER</span><span class="tag">COLD_WATER</span><span class="tag">CUP_SPECIFIED</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script src="https://unpkg.com/ml5@0.12.2/dist/ml5.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+<script src="src/bridge/stateBridge.js"></script>
+<script src="src/perception/faceTracker.js"></script>
+<script src="src/perception/poseTracker.js"></script>
+<script src="src/perception/speechTracker.js"></script>
+<script src="src/ui/dom.js"></script>
+</body>
+</html>

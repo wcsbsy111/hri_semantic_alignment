@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>家庭语义地图虚拟交互场景 v17-clean</title>
+<link rel="stylesheet" href="styles/base.css" />
+<link rel="stylesheet" href="styles/scene.css" />
+
+</head>
+<body>
+<div class="page">
+  <section class="topbar">
+    <div class="hero">
+      <div class="kicker">🏠 典型家庭场景 · 杯子语义歧义案例</div>
+      <h1>家庭语义地图中的<br/>上下文语义对齐原型</h1>
+      <p>用户只说“我想喝水”时，家中可能存在多种杯具；用户也可能提出“拿纸杯给我”“把漱口杯拿到厨房”“把杯子拿回卫生间”等普通家庭任务。该页面通过家庭语义地图展示：机器人需要在物体类别、位置、用途、目标去向和用户澄清之间完成语义对齐。</p>
+      <div class="top-actions">
+        <button class="primary-btn" id="demoAmbiguousWaterBtn" type="button">演示：我想喝水</button>
+        <button class="secondary-btn" id="downloadDefaultMapTopBtn" type="button">导出默认语义地图 JSON</button>
+        <span class="pill" id="connectionPill">🔌 等待检测页连接</span>
+      </div>
+    </div>
+    <aside class="brief-card">
+      <div class="brief-title">为什么这个案例更典型？</div>
+      <div class="compare">
+        <div class="compare-row"><b>传统机器人</b><span>通常把“杯子”当成单一物体类别，听到“我想喝水”后可能随意选择最近的杯子，甚至误拿漱口杯、高脚杯或待客杯。</span></div>
+        <div class="compare-row"><b>语义对齐机器人</b><span>将“杯子”拆解为位置、用途、材质、卫生属性、是否适合饮水、冷热水偏好等语义约束，先澄清再执行。</span></div>
+      </div>
+    </aside>
+  </section>
+
+  <main class="layout">
+    <section class="scene-card">
+      <div class="card-head">
+        <div><div class="card-title">家庭空间语义地图</div><div class="card-subtitle">餐桌、茶几、柜子、洗漱台、书桌与饮水机中的多杯具分布</div></div>
+        <span class="pill" id="modePill">模式：语义对齐</span>
+      </div>
+      <div class="house-wrap">
+        <div class="house" id="house">
+          <div class="bubble" id="bubble">你好，我是家庭服务机器人。你可以说“我想喝水”，我会先判断杯子和水温是否明确；如果不明确，我会问：“你希望用哪里的杯子？喝饮水机里的热水还是冷水？”</div>
+          <div class="route-line" id="routeLine"></div>
+          <div class="room kitchen" data-room="kitchen"><div class="room-title">🍳 厨房 / 饮水机</div><div class="furniture counter"></div><div class="dispenser"></div></div>
+          <div class="room dining" data-room="dining"><div class="room-title">🍽️ 餐厅 / 餐桌</div><div class="furniture table"></div></div>
+          <div class="room living" data-room="living"><div class="room-title">🛋️ 客厅 / 茶几</div><div class="furniture sofa"></div><div class="furniture coffee-table"></div></div>
+          <div class="room study" data-room="study"><div class="room-title">💻 书房 / 办公桌</div><div class="furniture desk"></div></div>
+          <div class="room bathroom" data-room="bathroom"><div class="room-title">🪥 卫生间 / 洗漱台</div><div class="furniture sink"></div></div>
+          <div class="room cabinet" data-room="cabinet"><div class="room-title">🗄️ 储物柜 / 待客杯具</div><div class="furniture storage"></div></div>
+          <div class="delivery-title">🤝 机器人递送区</div>
+          <div class="delivery-hint"></div>
+          <div class="user-spot" id="userSpot"><div class="user-avatar"><div class="head"></div><div class="body"></div><div class="arm left"></div><div class="arm right"></div></div><div class="user-label">用户位置</div></div>
+          <div class="robot happy" id="robot" data-carry=""><div class="head"><div class="face" id="robotFace">＾</div></div><div class="body"></div><div class="arm left"></div><div class="arm right"></div></div>
+
+        </div>
+      </div>
+      <div class="clarification-dock" id="clarificationDock">
+        <div class="clarify-head">
+          <div>
+            <div class="clarify-title">澄清选项与点击式语义对齐</div>
+            <div class="clarify-subtitle">这里对应机器人气泡中的追问：用户可以直接点“做什么事”、点杯子/物体、点地点，系统会自动组合成自然语言任务并交给意图推理。地图中的房间和物体也可以直接点击。</div>
+          </div>
+          <span class="pill" id="guidedStatePill">当前选择：等待点击</span>
+        </div>
+        <div class="clarify-grid">
+          <div class="clarify-block">
+            <div class="clarify-block-title">① 选择要做的事</div>
+            <div class="choice-row" id="intentChoices">
+              <button class="choice intent-choice" data-intent="water">接水喝</button>
+              <button class="choice intent-choice" data-intent="handover">拿给我</button>
+              <button class="choice intent-choice" data-intent="move">拿到地点</button>
+              <button class="choice intent-choice" data-intent="multi">多段任务</button>
+            </div>
+          </div>
+          <div class="clarify-block">
+            <div class="clarify-block-title">② 选择水温</div>
+            <div class="choice-row" id="tempChoices"><button class="choice" data-temp="hot">热水</button><button class="choice" data-temp="cold">冷水</button><button class="choice" data-temp="warm">温水</button></div>
+          </div>
+          <div class="clarify-block">
+            <div class="clarify-block-title">③ 选择对象 / 杯子</div>
+            <div class="object-choice-list" id="clarifyObjectChoices"></div>
+          </div>
+          <div class="clarify-block">
+            <div class="clarify-block-title">④ 选择地点 / 去向</div>
+            <div class="choice-row" id="roomChoices"></div>
+          </div>
+        </div>
+        <div class="guided-preview">
+          <div class="guided-preview-text" id="guidedPreview">点击上方选项后，会在这里生成一句可执行任务，例如：<b>“用玻璃杯接温水拿给我”</b>。</div>
+          <button class="tool-btn primary" id="runGuidedChoiceBtn" type="button">执行当前选择</button>
+          <button class="tool-btn" id="resetGuidedChoiceBtn" type="button">清空选择</button>
+        </div>
+        <div class="toolbar example-toolbar" id="exampleTaskButtons">
+          <button class="tool-btn" data-example="把那个杯子拿给我">泛指代模糊：把那个杯子拿给我</button>
+          <button class="tool-btn" data-example="把茶几上的那个杯子给我">方位指代模糊：把茶几上的那个杯子给我</button>
+          <button class="tool-btn" data-example="给我一个能喝水的杯子">泛指品类模糊：给我一个能喝水的杯子</button>
+          <button class="tool-btn" data-example="我想喝水">极简需求：我想喝水</button>
+          <button class="tool-btn" data-example="我有点渴，想喝点热的">隐含需求：我有点渴，想喝点热的</button>
+          <button class="tool-btn" data-example="先把塑料水杯拿给我，然后将一次性纸杯放到厨房">顺序多任务：先把塑料水杯拿给我，然后将一次性纸杯放到厨房</button>
+        </div>
+      </div>
+    </section>
+
+    <aside class="panel-card">
+      <div class="card-head"><div><div class="card-title">控制台与语义推理</div><div class="card-subtitle">接收检测页状态池，或使用下方按钮模拟测试</div></div></div>
+      <div class="panel-body">
+        <div class="interaction-card">
+          <div class="info-title">多模态输入与推理</div>
+          <div class="status-grid" id="stateBox">
+            <div class="status-chip"><b>🎤 语音识别</b><span id="voiceStatus">尚未输入语音。</span></div>
+            <div class="status-chip"><b>😊 表情状态</b><span id="expressionStatus">等待检测页连接。</span></div>
+            <div class="status-chip"><b>🖐️ 手势/姿态</b><span id="poseStatus">等待检测页连接。</span></div>
+            <div class="status-chip"><b>🧠 意图推理</b><span id="aiStatus">等待推理。</span></div>
+          </div>
+          <div class="context-board" id="contextBoard">
+            <div class="context-head"><div class="context-title">交互上下文</div><div class="context-pill" id="contextClarityPill">等待输入</div></div>
+            <div class="context-grid" id="contextBox">
+              <div class="context-chip full">这里会显示 AI 推理前参考的上下文：用户当前指令、是否有“这个/那个”等模糊指代、候选对象、已选择的水温/地点、历史澄清状态与语义地图摘要。</div>
+            </div>
+          </div>
+          <div class="input-row">
+            <input id="typedInput" class="text-input" placeholder="可输入：我想用餐桌玻璃杯喝冷水 / 帮我拿一次性纸杯，不要接水" />
+            <button class="tool-btn primary" id="sendTextBtn" type="button">发送输入</button>
+          </div>
+          <div class="input-row">
+            <button class="tool-btn blue" id="voiceSceneBtn" type="button">开始语音识别</button>
+            <button class="tool-btn gold" id="inferSceneBtn" type="button">进行意图推理</button>
+          </div>
+          <div class="key-row">
+            <input id="sceneApiKey" class="key-input" type="password" placeholder="DeepSeek API Key（可选，本地演示保存到浏览器）" />
+            <button class="mini-btn" id="saveSceneApiKeyBtn" type="button">保存 Key</button>
+          </div>
+          <div class="process-strip" id="processStrip"><div class="process-step on">输入采集</div><div class="process-step">语义推理</div><div class="process-step">主动澄清</div><div class="process-step">执行递送</div></div>
+          <div class="planner-board" id="plannerBoard"><div class="planner-title">任务计划</div><div class="planner-empty">等待输入。推理后会显示机器人准备执行的步骤。</div></div>
+          <div class="small-note">本页接收检测页状态池，也支持直接输入；任务统一进入语义地图规划器处理。</div>
+        </div>
+        <div class="info-box compact" id="decisionBox"><div class="info-title">决策解释</div>等待用户输入。</div>
+        <div>
+          <div class="info-title">用户上传语义地图</div>
+          <div class="filebox"><input type="file" id="mapUpload" accept="application/json,.json" /></div>
+          <div class="map-actions" style="margin-top:8px"><button class="tool-btn" id="downloadDefaultMapPanelBtn" type="button">导出默认地图</button></div>
+          <div class="small-note">支持上传 JSON 替换默认杯具地图。页面只展示对象名称、位置与语义属性，不再直接展示大段 JSON 代码。</div>
+        </div>
+        <div class="info-box tall semantic-map-panel">
+          <div class="info-title">当前语义地图对象</div>
+          <div class="map-list" id="mapBox"></div>
+        </div>
+      </div>
+    </aside>
+  </main>
+</div>
+
+<script src="src/map/semanticMap.js"></script>
+<script src="src/robot/robotStateMachine.js"></script>
+<script src="src/map/mapRenderer.js"></script>
+<script src="src/robot/robotExecutor.js"></script>
+<script src="src/planner/taskParser.js"></script>
+<script src="src/planner/llmPlanner.js"></script>
+<script src="src/ui/panels.js"></script>
+<script src="src/planner/ruleValidator.js"></script>
+<script src="src/ui/clarificationDock.js"></script>
+<script src="src/ui/sceneBootstrap.js"></script>
+</body>
+</html>
