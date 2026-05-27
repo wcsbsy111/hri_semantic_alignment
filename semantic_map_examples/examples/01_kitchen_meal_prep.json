@@ -1,0 +1,327 @@
+{
+  "rooms": {
+    "kitchen": {
+      "label": "厨房/备餐台",
+      "aliases": [
+        "厨房",
+        "备餐台",
+        "操作台",
+        "灶台",
+        "水槽"
+      ]
+    },
+    "dining": {
+      "label": "餐厅/餐桌",
+      "aliases": [
+        "餐厅",
+        "餐桌",
+        "饭桌",
+        "用餐区"
+      ]
+    },
+    "living": {
+      "label": "客厅/茶几",
+      "aliases": [
+        "客厅",
+        "茶几",
+        "沙发旁",
+        "电视柜"
+      ]
+    },
+    "study": {
+      "label": "书房/办公桌",
+      "aliases": [
+        "书房",
+        "办公桌",
+        "书桌",
+        "工作区"
+      ]
+    },
+    "bathroom": {
+      "label": "卫生间/洗漱台",
+      "aliases": [
+        "卫生间",
+        "洗手间",
+        "洗漱台",
+        "台盆"
+      ]
+    },
+    "cabinet": {
+      "label": "橱柜/餐具柜",
+      "aliases": [
+        "橱柜",
+        "餐具柜",
+        "柜子",
+        "储物柜"
+      ]
+    },
+    "user": {
+      "label": "用户位置",
+      "aliases": [
+        "我这里",
+        "我这边",
+        "用户位置",
+        "身边",
+        "手边",
+        "拿给我",
+        "递给我"
+      ]
+    }
+  },
+  "objects": [
+    {
+      "id": "rice_bowl_01",
+      "name": "饭碗",
+      "icon": "🍚",
+      "category": "餐具",
+      "room": "cabinet",
+      "location": "餐具柜中层",
+      "aliases": [
+        "饭碗",
+        "碗",
+        "小碗"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 30,
+      "y": 48,
+      "note": "可从橱柜拿到餐桌",
+      "homeRoom": "cabinet",
+      "homeLocation": "餐具柜中层"
+    },
+    {
+      "id": "soup_bowl_01",
+      "name": "汤碗",
+      "icon": "🥣",
+      "category": "餐具",
+      "room": "cabinet",
+      "location": "餐具柜右侧",
+      "aliases": [
+        "汤碗",
+        "大碗",
+        "碗"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 50,
+      "y": 48,
+      "note": "与饭碗容易混淆",
+      "homeRoom": "cabinet",
+      "homeLocation": "餐具柜右侧"
+    },
+    {
+      "id": "dinner_plate_01",
+      "name": "餐盘",
+      "icon": "🍽️",
+      "category": "餐具",
+      "room": "cabinet",
+      "location": "餐具柜下层",
+      "aliases": [
+        "餐盘",
+        "盘子",
+        "碟子"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 70,
+      "y": 52,
+      "note": "可拿到餐桌",
+      "homeRoom": "cabinet",
+      "homeLocation": "餐具柜下层"
+    },
+    {
+      "id": "spoon_01",
+      "name": "汤勺",
+      "icon": "🥄",
+      "category": "餐具",
+      "room": "kitchen",
+      "location": "厨房台面左侧",
+      "aliases": [
+        "汤勺",
+        "勺子",
+        "大勺"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 28,
+      "y": 42,
+      "note": "适合移动到餐桌",
+      "homeRoom": "kitchen",
+      "homeLocation": "厨房台面左侧"
+    },
+    {
+      "id": "chopsticks_01",
+      "name": "筷子",
+      "icon": "🥢",
+      "category": "餐具",
+      "room": "kitchen",
+      "location": "筷筒中",
+      "aliases": [
+        "筷子",
+        "一双筷子",
+        "餐筷"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 42,
+      "y": 38,
+      "note": "细长物体，拿取任务",
+      "homeRoom": "kitchen",
+      "homeLocation": "筷筒中"
+    },
+    {
+      "id": "soy_sauce_01",
+      "name": "酱油瓶",
+      "icon": "🧂",
+      "category": "调料",
+      "room": "kitchen",
+      "location": "调料架右侧",
+      "aliases": [
+        "酱油",
+        "酱油瓶",
+        "调料瓶"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 64,
+      "y": 35,
+      "note": "可移动到餐桌，用后归位",
+      "homeRoom": "kitchen",
+      "homeLocation": "调料架右侧"
+    },
+    {
+      "id": "salt_shaker_01",
+      "name": "盐罐",
+      "icon": "🧂",
+      "category": "调料",
+      "room": "kitchen",
+      "location": "调料架左侧",
+      "aliases": [
+        "盐",
+        "盐罐",
+        "调味盐"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 54,
+      "y": 36,
+      "note": "与其他调料需要区分",
+      "homeRoom": "kitchen",
+      "homeLocation": "调料架左侧"
+    },
+    {
+      "id": "cutting_board_01",
+      "name": "砧板",
+      "icon": "🟫",
+      "category": "厨房工具",
+      "room": "kitchen",
+      "location": "水槽旁",
+      "aliases": [
+        "砧板",
+        "菜板",
+        "案板"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 75,
+      "y": 60,
+      "note": "不应默认递给用户，可移动到备餐台",
+      "homeRoom": "kitchen",
+      "homeLocation": "水槽旁"
+    },
+    {
+      "id": "dish_towel_01",
+      "name": "厨房抹布",
+      "icon": "🧽",
+      "category": "清洁用品",
+      "room": "kitchen",
+      "location": "水槽边",
+      "aliases": [
+        "抹布",
+        "厨房抹布",
+        "擦布"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 33,
+      "y": 65,
+      "note": "清洁用品，不应放到餐桌食物旁",
+      "homeRoom": "kitchen",
+      "homeLocation": "水槽边"
+    },
+    {
+      "id": "serving_tray_01",
+      "name": "托盘",
+      "icon": "🥘",
+      "category": "备餐辅助",
+      "room": "dining",
+      "location": "餐桌左侧",
+      "aliases": [
+        "托盘",
+        "餐盘托盘",
+        "盘托"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 35,
+      "y": 55,
+      "note": "可承载多物体移动",
+      "homeRoom": "dining",
+      "homeLocation": "餐桌左侧"
+    },
+    {
+      "id": "water_bottle_01",
+      "name": "瓶装水",
+      "icon": "💧",
+      "category": "饮用物",
+      "room": "kitchen",
+      "location": "冰箱旁边",
+      "aliases": [
+        "瓶装水",
+        "矿泉水",
+        "水"
+      ],
+      "waterSuitable": true,
+      "hygiene": "family",
+      "temp": [
+        "cold"
+      ],
+      "x": 80,
+      "y": 42,
+      "note": "可以直接拿给用户",
+      "homeRoom": "kitchen",
+      "homeLocation": "冰箱旁边"
+    },
+    {
+      "id": "napkin_pack_01",
+      "name": "餐巾纸",
+      "icon": "🧻",
+      "category": "用餐用品",
+      "room": "dining",
+      "location": "餐桌右上角",
+      "aliases": [
+        "餐巾纸",
+        "纸巾",
+        "餐纸"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 72,
+      "y": 40,
+      "note": "可递送到用户位置",
+      "homeRoom": "dining",
+      "homeLocation": "餐桌右上角"
+    }
+  ]
+}

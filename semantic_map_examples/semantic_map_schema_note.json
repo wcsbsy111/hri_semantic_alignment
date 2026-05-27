@@ -1,0 +1,34 @@
+{
+  "required_room_keys": [
+    "kitchen",
+    "dining",
+    "living",
+    "study",
+    "bathroom",
+    "cabinet",
+    "user"
+  ],
+  "required_object_fields": [
+    "id",
+    "name",
+    "icon",
+    "category",
+    "room",
+    "location",
+    "aliases",
+    "waterSuitable",
+    "hygiene",
+    "temp",
+    "x",
+    "y",
+    "note",
+    "homeRoom",
+    "homeLocation"
+  ],
+  "notes": {
+    "room": "必须是 required_room_keys 中的一个",
+    "x_y": "0-100，表示物体在该房间内的百分比坐标",
+    "aliases": "用户可能使用的称呼，越完整越容易匹配",
+    "waterSuitable_temp": "为兼容当前代码保留；非饮水物品可以 waterSuitable=false, temp=[]"
+  }
+}

@@ -1,0 +1,321 @@
+{
+  "rooms": {
+    "kitchen": {
+      "label": "厨房/操作台",
+      "aliases": [
+        "厨房",
+        "操作台",
+        "台面",
+        "水槽",
+        "饮水机"
+      ]
+    },
+    "dining": {
+      "label": "餐厅/餐桌",
+      "aliases": [
+        "餐厅",
+        "餐桌",
+        "饭桌",
+        "桌面"
+      ]
+    },
+    "living": {
+      "label": "客厅/沙发茶几",
+      "aliases": [
+        "客厅",
+        "沙发",
+        "茶几",
+        "电视柜"
+      ]
+    },
+    "study": {
+      "label": "书房/办公桌",
+      "aliases": [
+        "书房",
+        "办公桌",
+        "书桌",
+        "工作区"
+      ]
+    },
+    "bathroom": {
+      "label": "卫生间/洗漱台",
+      "aliases": [
+        "卫生间",
+        "洗手间",
+        "洗漱台",
+        "台盆"
+      ]
+    },
+    "cabinet": {
+      "label": "客厅收纳柜",
+      "aliases": [
+        "收纳柜",
+        "电视柜",
+        "柜子"
+      ]
+    },
+    "user": {
+      "label": "用户位置",
+      "aliases": [
+        "我这里",
+        "我这边",
+        "用户位置",
+        "身边",
+        "手边",
+        "拿给我",
+        "递给我"
+      ]
+    }
+  },
+  "objects": [
+    {
+      "id": "tv_remote_02",
+      "name": "电视遥控器",
+      "icon": "📺",
+      "category": "家电控制物",
+      "room": "living",
+      "location": "茶几中央",
+      "aliases": [
+        "电视遥控器",
+        "遥控器"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 52,
+      "y": 48,
+      "note": "常用递送物",
+      "homeRoom": "living",
+      "homeLocation": "茶几中央"
+    },
+    {
+      "id": "ac_remote_02",
+      "name": "空调遥控器",
+      "icon": "❄️",
+      "category": "家电控制物",
+      "room": "cabinet",
+      "location": "电视柜左侧抽屉",
+      "aliases": [
+        "空调遥控器",
+        "空调控制器"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 28,
+      "y": 50,
+      "note": "与电视遥控器形成歧义",
+      "homeRoom": "cabinet",
+      "homeLocation": "电视柜左侧抽屉"
+    },
+    {
+      "id": "game_controller_01",
+      "name": "游戏手柄",
+      "icon": "🎮",
+      "category": "娱乐设备",
+      "room": "cabinet",
+      "location": "电视柜右侧",
+      "aliases": [
+        "游戏手柄",
+        "手柄",
+        "游戏控制器"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 68,
+      "y": 52,
+      "note": "可拿给用户",
+      "homeRoom": "cabinet",
+      "homeLocation": "电视柜右侧"
+    },
+    {
+      "id": "blanket_01",
+      "name": "薄毯",
+      "icon": "🧣",
+      "category": "舒适用品",
+      "room": "living",
+      "location": "沙发左侧",
+      "aliases": [
+        "薄毯",
+        "毯子",
+        "盖毯"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 25,
+      "y": 70,
+      "note": "可根据“冷”语义拿给用户",
+      "homeRoom": "living",
+      "homeLocation": "沙发左侧"
+    },
+    {
+      "id": "pillow_01",
+      "name": "靠枕",
+      "icon": "🛋️",
+      "category": "舒适用品",
+      "room": "living",
+      "location": "沙发右侧",
+      "aliases": [
+        "靠枕",
+        "抱枕",
+        "枕头"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 72,
+      "y": 70,
+      "note": "可移动到用户位置",
+      "homeRoom": "living",
+      "homeLocation": "沙发右侧"
+    },
+    {
+      "id": "reading_glasses_02",
+      "name": "阅读眼镜",
+      "icon": "👓",
+      "category": "个人物品",
+      "room": "living",
+      "location": "茶几左侧",
+      "aliases": [
+        "阅读眼镜",
+        "眼镜",
+        "老花镜"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 32,
+      "y": 44,
+      "note": "易碎物体，需要小心递送",
+      "homeRoom": "living",
+      "homeLocation": "茶几左侧"
+    },
+    {
+      "id": "magazine_01",
+      "name": "杂志",
+      "icon": "📖",
+      "category": "阅读物",
+      "room": "living",
+      "location": "茶几下层",
+      "aliases": [
+        "杂志",
+        "那本杂志",
+        "阅读材料"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 42,
+      "y": 62,
+      "note": "可拿给用户",
+      "homeRoom": "living",
+      "homeLocation": "茶几下层"
+    },
+    {
+      "id": "snack_box_02",
+      "name": "饼干盒",
+      "icon": "🍪",
+      "category": "休闲食品",
+      "room": "cabinet",
+      "location": "客厅收纳柜中层",
+      "aliases": [
+        "饼干盒",
+        "零食盒",
+        "饼干"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 48,
+      "y": 42,
+      "note": "可移动到茶几",
+      "homeRoom": "cabinet",
+      "homeLocation": "客厅收纳柜中层"
+    },
+    {
+      "id": "tissue_box_living_01",
+      "name": "客厅纸巾盒",
+      "icon": "🧻",
+      "category": "生活用品",
+      "room": "living",
+      "location": "茶几右上角",
+      "aliases": [
+        "纸巾盒",
+        "抽纸",
+        "纸巾"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 70,
+      "y": 38,
+      "note": "可递送或移动",
+      "homeRoom": "living",
+      "homeLocation": "茶几右上角"
+    },
+    {
+      "id": "phone_stand_01",
+      "name": "手机支架",
+      "icon": "📱",
+      "category": "电子配件",
+      "room": "living",
+      "location": "沙发边桌",
+      "aliases": [
+        "手机支架",
+        "支架"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 82,
+      "y": 52,
+      "note": "可拿到书房",
+      "homeRoom": "living",
+      "homeLocation": "沙发边桌"
+    },
+    {
+      "id": "floor_lamp_remote_01",
+      "name": "落地灯遥控器",
+      "icon": "💡",
+      "category": "家电控制物",
+      "room": "living",
+      "location": "沙发扶手",
+      "aliases": [
+        "灯遥控器",
+        "落地灯遥控器",
+        "灯控"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 22,
+      "y": 52,
+      "note": "与其他遥控器形成指代歧义",
+      "homeRoom": "living",
+      "homeLocation": "沙发扶手"
+    },
+    {
+      "id": "coaster_set_01",
+      "name": "杯垫套装",
+      "icon": "⭕",
+      "category": "客厅用品",
+      "room": "cabinet",
+      "location": "电视柜上层",
+      "aliases": [
+        "杯垫",
+        "杯垫套装",
+        "垫子"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 78,
+      "y": 42,
+      "note": "可移动到茶几",
+      "homeRoom": "cabinet",
+      "homeLocation": "电视柜上层"
+    }
+  ]
+}

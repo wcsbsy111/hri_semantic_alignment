@@ -1,0 +1,324 @@
+{
+  "rooms": {
+    "kitchen": {
+      "label": "厨房/操作台",
+      "aliases": [
+        "厨房",
+        "操作台",
+        "台面",
+        "水槽",
+        "饮水机"
+      ]
+    },
+    "dining": {
+      "label": "餐厅/餐桌",
+      "aliases": [
+        "餐厅",
+        "餐桌",
+        "饭桌",
+        "桌面"
+      ]
+    },
+    "living": {
+      "label": "客厅/护理操作区",
+      "aliases": [
+        "客厅",
+        "沙发",
+        "茶几",
+        "护理区"
+      ]
+    },
+    "study": {
+      "label": "书房/办公桌",
+      "aliases": [
+        "书房",
+        "办公桌",
+        "书桌",
+        "工作区"
+      ]
+    },
+    "bathroom": {
+      "label": "卫生间/洗漱台",
+      "aliases": [
+        "卫生间",
+        "洗手间",
+        "洗漱台",
+        "台盆"
+      ]
+    },
+    "cabinet": {
+      "label": "家庭护理柜",
+      "aliases": [
+        "药箱",
+        "护理柜",
+        "收纳柜",
+        "柜子",
+        "急救箱"
+      ]
+    },
+    "user": {
+      "label": "用户位置",
+      "aliases": [
+        "我这里",
+        "我这边",
+        "用户位置",
+        "身边",
+        "手边",
+        "拿给我",
+        "递给我"
+      ]
+    }
+  },
+  "objects": [
+    {
+      "id": "first_aid_box_01",
+      "name": "家庭急救箱",
+      "icon": "🧰",
+      "category": "家庭护理物品",
+      "room": "cabinet",
+      "location": "护理柜上层",
+      "aliases": [
+        "急救箱",
+        "家庭急救箱",
+        "药箱"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 32,
+      "y": 42,
+      "note": "仅用于拿取急救用品，不涉及用药判断",
+      "homeRoom": "cabinet",
+      "homeLocation": "护理柜上层"
+    },
+    {
+      "id": "bandage_pack_01",
+      "name": "创可贴盒",
+      "icon": "🩹",
+      "category": "基础护理用品",
+      "room": "cabinet",
+      "location": "急救箱旁",
+      "aliases": [
+        "创可贴",
+        "创可贴盒",
+        "创口贴"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 48,
+      "y": 42,
+      "note": "可拿给用户",
+      "homeRoom": "cabinet",
+      "homeLocation": "急救箱旁"
+    },
+    {
+      "id": "thermometer_01",
+      "name": "电子体温计",
+      "icon": "🌡️",
+      "category": "测量工具",
+      "room": "cabinet",
+      "location": "护理柜中层",
+      "aliases": [
+        "体温计",
+        "电子体温计"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 64,
+      "y": 44,
+      "note": "测量工具，可递送",
+      "homeRoom": "cabinet",
+      "homeLocation": "护理柜中层"
+    },
+    {
+      "id": "cotton_swab_01",
+      "name": "棉签盒",
+      "icon": "🧴",
+      "category": "基础护理用品",
+      "room": "cabinet",
+      "location": "护理柜右侧",
+      "aliases": [
+        "棉签",
+        "棉签盒"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 78,
+      "y": 48,
+      "note": "与棉片区分",
+      "homeRoom": "cabinet",
+      "homeLocation": "护理柜右侧"
+    },
+    {
+      "id": "gauze_pack_01",
+      "name": "纱布包",
+      "icon": "🩹",
+      "category": "基础护理用品",
+      "room": "cabinet",
+      "location": "急救箱下层",
+      "aliases": [
+        "纱布",
+        "纱布包"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 36,
+      "y": 60,
+      "note": "可拿取",
+      "homeRoom": "cabinet",
+      "homeLocation": "急救箱下层"
+    },
+    {
+      "id": "ice_pack_01",
+      "name": "冰袋",
+      "icon": "🧊",
+      "category": "冷敷用品",
+      "room": "kitchen",
+      "location": "冰箱冷冻层",
+      "aliases": [
+        "冰袋",
+        "冷敷袋"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 70,
+      "y": 36,
+      "note": "从厨房/冰箱取出",
+      "homeRoom": "kitchen",
+      "homeLocation": "冰箱冷冻层"
+    },
+    {
+      "id": "hot_water_bag_01",
+      "name": "热水袋",
+      "icon": "♨️",
+      "category": "护理辅助用品",
+      "room": "cabinet",
+      "location": "收纳柜下层",
+      "aliases": [
+        "热水袋",
+        "暖水袋"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 58,
+      "y": 62,
+      "note": "护理辅助物，不自动加热",
+      "homeRoom": "cabinet",
+      "homeLocation": "收纳柜下层"
+    },
+    {
+      "id": "hand_sanitizer_01",
+      "name": "免洗洗手液",
+      "icon": "🧴",
+      "category": "清洁护理用品",
+      "room": "living",
+      "location": "茶几左侧",
+      "aliases": [
+        "免洗洗手液",
+        "洗手液",
+        "消毒凝胶"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 35,
+      "y": 50,
+      "note": "可拿给用户",
+      "homeRoom": "living",
+      "homeLocation": "茶几左侧"
+    },
+    {
+      "id": "mask_pack_02",
+      "name": "医用口罩包",
+      "icon": "😷",
+      "category": "防护用品",
+      "room": "cabinet",
+      "location": "护理柜上层右侧",
+      "aliases": [
+        "口罩",
+        "医用口罩",
+        "口罩包"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 72,
+      "y": 34,
+      "note": "防护用品",
+      "homeRoom": "cabinet",
+      "homeLocation": "护理柜上层右侧"
+    },
+    {
+      "id": "small_towel_01",
+      "name": "小毛巾",
+      "icon": "🧺",
+      "category": "护理辅助用品",
+      "room": "bathroom",
+      "location": "洗漱台左侧",
+      "aliases": [
+        "小毛巾",
+        "毛巾",
+        "手巾"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 38,
+      "y": 52,
+      "note": "可移动到客厅",
+      "homeRoom": "bathroom",
+      "homeLocation": "洗漱台左侧"
+    },
+    {
+      "id": "water_bottle_care_01",
+      "name": "瓶装水",
+      "icon": "💧",
+      "category": "饮用物",
+      "room": "kitchen",
+      "location": "厨房台面",
+      "aliases": [
+        "瓶装水",
+        "水",
+        "矿泉水"
+      ],
+      "waterSuitable": true,
+      "hygiene": "family",
+      "temp": [
+        "cold",
+        "warm"
+      ],
+      "x": 52,
+      "y": 42,
+      "note": "可拿给用户",
+      "homeRoom": "kitchen",
+      "homeLocation": "厨房台面"
+    },
+    {
+      "id": "pill_organizer_empty_01",
+      "name": "空分药盒",
+      "icon": "💊",
+      "category": "护理收纳用品",
+      "room": "cabinet",
+      "location": "护理柜抽屉",
+      "aliases": [
+        "分药盒",
+        "空药盒",
+        "药盒"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 52,
+      "y": 72,
+      "note": "只作为收纳物，不提供用药建议",
+      "homeRoom": "cabinet",
+      "homeLocation": "护理柜抽屉"
+    }
+  ]
+}

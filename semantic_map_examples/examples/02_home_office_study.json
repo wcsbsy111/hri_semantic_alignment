@@ -1,0 +1,324 @@
+{
+  "rooms": {
+    "kitchen": {
+      "label": "厨房/操作台",
+      "aliases": [
+        "厨房",
+        "操作台",
+        "台面",
+        "水槽",
+        "饮水机"
+      ]
+    },
+    "dining": {
+      "label": "餐厅/餐桌",
+      "aliases": [
+        "餐厅",
+        "餐桌",
+        "饭桌",
+        "桌面"
+      ]
+    },
+    "living": {
+      "label": "客厅/茶几",
+      "aliases": [
+        "客厅",
+        "茶几",
+        "沙发旁",
+        "电视柜"
+      ]
+    },
+    "study": {
+      "label": "书房/办公桌",
+      "aliases": [
+        "书房",
+        "办公桌",
+        "书桌",
+        "学习桌",
+        "工作区"
+      ]
+    },
+    "bathroom": {
+      "label": "卫生间/洗漱台",
+      "aliases": [
+        "卫生间",
+        "洗手间",
+        "洗漱台",
+        "台盆"
+      ]
+    },
+    "cabinet": {
+      "label": "文件柜/收纳柜",
+      "aliases": [
+        "文件柜",
+        "收纳柜",
+        "柜子",
+        "书柜"
+      ]
+    },
+    "user": {
+      "label": "用户位置",
+      "aliases": [
+        "我这里",
+        "我这边",
+        "用户位置",
+        "身边",
+        "手边",
+        "拿给我",
+        "递给我"
+      ]
+    }
+  },
+  "objects": [
+    {
+      "id": "laptop_01",
+      "name": "笔记本电脑",
+      "icon": "💻",
+      "category": "电子设备",
+      "room": "study",
+      "location": "书桌中央",
+      "aliases": [
+        "笔记本电脑",
+        "电脑",
+        "笔电"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 50,
+      "y": 45,
+      "note": "贵重电子设备，需要小心移动",
+      "homeRoom": "study",
+      "homeLocation": "书桌中央"
+    },
+    {
+      "id": "tablet_01",
+      "name": "平板电脑",
+      "icon": "📱",
+      "category": "电子设备",
+      "room": "study",
+      "location": "书桌右侧",
+      "aliases": [
+        "平板",
+        "平板电脑",
+        "iPad"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 70,
+      "y": 50,
+      "note": "可拿给用户",
+      "homeRoom": "study",
+      "homeLocation": "书桌右侧"
+    },
+    {
+      "id": "wireless_mouse_01",
+      "name": "无线鼠标",
+      "icon": "🖱️",
+      "category": "电子配件",
+      "room": "study",
+      "location": "鼠标垫上",
+      "aliases": [
+        "鼠标",
+        "无线鼠标"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 62,
+      "y": 66,
+      "note": "办公桌小物件",
+      "homeRoom": "study",
+      "homeLocation": "鼠标垫上"
+    },
+    {
+      "id": "keyboard_01",
+      "name": "蓝牙键盘",
+      "icon": "⌨️",
+      "category": "电子配件",
+      "room": "study",
+      "location": "显示器前",
+      "aliases": [
+        "键盘",
+        "蓝牙键盘"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 48,
+      "y": 62,
+      "note": "可移动但较大",
+      "homeRoom": "study",
+      "homeLocation": "显示器前"
+    },
+    {
+      "id": "pen_01",
+      "name": "黑色签字笔",
+      "icon": "🖊️",
+      "category": "文具",
+      "room": "study",
+      "location": "笔筒里",
+      "aliases": [
+        "签字笔",
+        "黑笔",
+        "笔"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 30,
+      "y": 52,
+      "note": "可递送给用户",
+      "homeRoom": "study",
+      "homeLocation": "笔筒里"
+    },
+    {
+      "id": "notebook_work_01",
+      "name": "会议笔记本",
+      "icon": "📔",
+      "category": "文具",
+      "room": "study",
+      "location": "书桌左侧",
+      "aliases": [
+        "会议笔记本",
+        "笔记本",
+        "本子"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 34,
+      "y": 38,
+      "note": "可移动到餐桌或用户",
+      "homeRoom": "study",
+      "homeLocation": "书桌左侧"
+    },
+    {
+      "id": "sticky_notes_01",
+      "name": "便利贴",
+      "icon": "🗒️",
+      "category": "文具",
+      "room": "study",
+      "location": "显示器旁",
+      "aliases": [
+        "便利贴",
+        "便签纸",
+        "便签"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 58,
+      "y": 35,
+      "note": "轻小办公用品",
+      "homeRoom": "study",
+      "homeLocation": "显示器旁"
+    },
+    {
+      "id": "document_folder_01",
+      "name": "蓝色文件夹",
+      "icon": "📁",
+      "category": "文件资料",
+      "room": "cabinet",
+      "location": "文件柜上层",
+      "aliases": [
+        "蓝色文件夹",
+        "文件夹",
+        "资料夹"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 30,
+      "y": 44,
+      "note": "可从文件柜拿到书桌",
+      "homeRoom": "cabinet",
+      "homeLocation": "文件柜上层"
+    },
+    {
+      "id": "book_01",
+      "name": "设计方法书",
+      "icon": "📘",
+      "category": "书籍",
+      "room": "cabinet",
+      "location": "书柜中层",
+      "aliases": [
+        "设计方法书",
+        "书",
+        "那本书"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 52,
+      "y": 48,
+      "note": "书籍拿取场景",
+      "homeRoom": "cabinet",
+      "homeLocation": "书柜中层"
+    },
+    {
+      "id": "usb_drive_01",
+      "name": "U盘",
+      "icon": "💾",
+      "category": "电子配件",
+      "room": "study",
+      "location": "键盘旁",
+      "aliases": [
+        "U盘",
+        "优盘",
+        "存储盘"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 72,
+      "y": 35,
+      "note": "小物体，适合测试模糊指代",
+      "homeRoom": "study",
+      "homeLocation": "键盘旁"
+    },
+    {
+      "id": "headphones_01",
+      "name": "无线耳机",
+      "icon": "🎧",
+      "category": "电子配件",
+      "room": "living",
+      "location": "沙发边桌",
+      "aliases": [
+        "耳机",
+        "无线耳机",
+        "蓝牙耳机"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 60,
+      "y": 50,
+      "note": "可能需要从客厅拿到书房",
+      "homeRoom": "living",
+      "homeLocation": "沙发边桌"
+    },
+    {
+      "id": "charging_cable_01",
+      "name": "充电线",
+      "icon": "🔌",
+      "category": "电子配件",
+      "room": "study",
+      "location": "书桌右下角",
+      "aliases": [
+        "充电线",
+        "数据线",
+        "线"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 78,
+      "y": 70,
+      "note": "与充电器区分",
+      "homeRoom": "study",
+      "homeLocation": "书桌右下角"
+    }
+  ]
+}

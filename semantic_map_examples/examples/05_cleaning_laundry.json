@@ -1,0 +1,319 @@
+{
+  "rooms": {
+    "kitchen": {
+      "label": "厨房/操作台",
+      "aliases": [
+        "厨房",
+        "操作台",
+        "台面",
+        "水槽",
+        "饮水机"
+      ]
+    },
+    "dining": {
+      "label": "餐厅/餐桌",
+      "aliases": [
+        "餐厅",
+        "餐桌",
+        "饭桌",
+        "桌面"
+      ]
+    },
+    "living": {
+      "label": "客厅/茶几",
+      "aliases": [
+        "客厅",
+        "茶几",
+        "沙发旁",
+        "电视柜"
+      ]
+    },
+    "study": {
+      "label": "书房/办公桌",
+      "aliases": [
+        "书房",
+        "办公桌",
+        "书桌",
+        "工作区"
+      ]
+    },
+    "bathroom": {
+      "label": "卫生间/清洁区",
+      "aliases": [
+        "卫生间",
+        "洗手间",
+        "洗漱台",
+        "清洁区"
+      ]
+    },
+    "cabinet": {
+      "label": "清洁收纳柜",
+      "aliases": [
+        "清洁柜",
+        "收纳柜",
+        "柜子",
+        "储物柜"
+      ]
+    },
+    "user": {
+      "label": "用户位置",
+      "aliases": [
+        "我这里",
+        "我这边",
+        "用户位置",
+        "身边",
+        "手边",
+        "拿给我",
+        "递给我"
+      ]
+    }
+  },
+  "objects": [
+    {
+      "id": "laundry_basket_01",
+      "name": "脏衣篮",
+      "icon": "🧺",
+      "category": "洗衣用品",
+      "room": "bathroom",
+      "location": "洗漱台旁",
+      "aliases": [
+        "脏衣篮",
+        "衣篮",
+        "衣服篮"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 70,
+      "y": 62,
+      "note": "通常在卫生间/洗衣区",
+      "homeRoom": "bathroom",
+      "homeLocation": "洗漱台旁"
+    },
+    {
+      "id": "detergent_01",
+      "name": "洗衣液",
+      "icon": "🧴",
+      "category": "清洁用品",
+      "room": "cabinet",
+      "location": "清洁柜下层",
+      "aliases": [
+        "洗衣液",
+        "洗衣剂"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 36,
+      "y": 58,
+      "note": "不可递给儿童，不应靠近食物",
+      "homeRoom": "cabinet",
+      "homeLocation": "清洁柜下层"
+    },
+    {
+      "id": "cleaning_sponge_01",
+      "name": "清洁海绵",
+      "icon": "🧽",
+      "category": "清洁用品",
+      "room": "bathroom",
+      "location": "水槽旁",
+      "aliases": [
+        "海绵",
+        "清洁海绵",
+        "刷碗海绵"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 46,
+      "y": 50,
+      "note": "清洁用品",
+      "homeRoom": "bathroom",
+      "homeLocation": "水槽旁"
+    },
+    {
+      "id": "trash_bag_roll_01",
+      "name": "垃圾袋卷",
+      "icon": "🗑️",
+      "category": "清洁用品",
+      "room": "cabinet",
+      "location": "清洁柜中层",
+      "aliases": [
+        "垃圾袋",
+        "垃圾袋卷"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 58,
+      "y": 45,
+      "note": "可拿到厨房或用户",
+      "homeRoom": "cabinet",
+      "homeLocation": "清洁柜中层"
+    },
+    {
+      "id": "microfiber_cloth_01",
+      "name": "超细纤维抹布",
+      "icon": "🧻",
+      "category": "清洁用品",
+      "room": "cabinet",
+      "location": "清洁柜上层",
+      "aliases": [
+        "抹布",
+        "清洁布",
+        "超细纤维抹布"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 26,
+      "y": 42,
+      "note": "可移动到客厅清洁区域",
+      "homeRoom": "cabinet",
+      "homeLocation": "清洁柜上层"
+    },
+    {
+      "id": "spray_bottle_01",
+      "name": "清洁喷壶",
+      "icon": "🧴",
+      "category": "清洁用品",
+      "room": "cabinet",
+      "location": "清洁柜右侧",
+      "aliases": [
+        "喷壶",
+        "清洁喷壶",
+        "清洁剂"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 78,
+      "y": 50,
+      "note": "需要与洗衣液区分",
+      "homeRoom": "cabinet",
+      "homeLocation": "清洁柜右侧"
+    },
+    {
+      "id": "rubber_gloves_01",
+      "name": "橡胶手套",
+      "icon": "🧤",
+      "category": "清洁防护",
+      "room": "bathroom",
+      "location": "洗漱台抽屉",
+      "aliases": [
+        "橡胶手套",
+        "手套",
+        "清洁手套"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 35,
+      "y": 62,
+      "note": "清洁前拿取",
+      "homeRoom": "bathroom",
+      "homeLocation": "洗漱台抽屉"
+    },
+    {
+      "id": "dustpan_01",
+      "name": "簸箕",
+      "icon": "🧹",
+      "category": "清扫工具",
+      "room": "cabinet",
+      "location": "清洁柜侧边",
+      "aliases": [
+        "簸箕",
+        "垃圾铲"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 82,
+      "y": 72,
+      "note": "与扫把配套",
+      "homeRoom": "cabinet",
+      "homeLocation": "清洁柜侧边"
+    },
+    {
+      "id": "broom_01",
+      "name": "扫把",
+      "icon": "🧹",
+      "category": "清扫工具",
+      "room": "cabinet",
+      "location": "清洁柜侧边",
+      "aliases": [
+        "扫把",
+        "扫帚"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 70,
+      "y": 72,
+      "note": "长柄物体，适合归位演示",
+      "homeRoom": "cabinet",
+      "homeLocation": "清洁柜侧边"
+    },
+    {
+      "id": "paper_towel_roll_01",
+      "name": "厨房纸",
+      "icon": "🧻",
+      "category": "清洁耗材",
+      "room": "kitchen",
+      "location": "厨房台面右侧",
+      "aliases": [
+        "厨房纸",
+        "厨房纸巾",
+        "纸巾卷"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 68,
+      "y": 42,
+      "note": "可移动到客厅或餐桌",
+      "homeRoom": "kitchen",
+      "homeLocation": "厨房台面右侧"
+    },
+    {
+      "id": "trash_bin_small_01",
+      "name": "小垃圾桶",
+      "icon": "🗑️",
+      "category": "清洁容器",
+      "room": "study",
+      "location": "书桌旁地面",
+      "aliases": [
+        "垃圾桶",
+        "小垃圾桶"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 28,
+      "y": 72,
+      "note": "可移动但通常有固定位置",
+      "homeRoom": "study",
+      "homeLocation": "书桌旁地面"
+    },
+    {
+      "id": "wet_wipes_01",
+      "name": "湿巾包",
+      "icon": "🧻",
+      "category": "清洁耗材",
+      "room": "dining",
+      "location": "餐桌边",
+      "aliases": [
+        "湿巾",
+        "湿巾包"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 60,
+      "y": 58,
+      "note": "可拿给用户",
+      "homeRoom": "dining",
+      "homeLocation": "餐桌边"
+    }
+  ]
+}

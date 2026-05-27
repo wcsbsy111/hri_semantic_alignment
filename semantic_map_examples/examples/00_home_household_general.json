@@ -1,0 +1,325 @@
+{
+  "rooms": {
+    "kitchen": {
+      "label": "厨房/台面",
+      "aliases": [
+        "厨房",
+        "台面",
+        "水槽",
+        "冰箱旁"
+      ]
+    },
+    "dining": {
+      "label": "餐厅/餐桌",
+      "aliases": [
+        "餐厅",
+        "餐桌",
+        "饭桌",
+        "桌面"
+      ]
+    },
+    "living": {
+      "label": "客厅/茶几",
+      "aliases": [
+        "客厅",
+        "茶几",
+        "沙发旁",
+        "电视柜"
+      ]
+    },
+    "study": {
+      "label": "书房/办公桌",
+      "aliases": [
+        "书房",
+        "办公桌",
+        "书桌",
+        "工作区"
+      ]
+    },
+    "bathroom": {
+      "label": "卫生间/洗漱台",
+      "aliases": [
+        "卫生间",
+        "洗手间",
+        "洗漱台",
+        "台盆"
+      ]
+    },
+    "cabinet": {
+      "label": "玄关柜/收纳柜",
+      "aliases": [
+        "玄关",
+        "玄关柜",
+        "收纳柜",
+        "柜子"
+      ]
+    },
+    "user": {
+      "label": "用户位置",
+      "aliases": [
+        "我这里",
+        "我这边",
+        "用户位置",
+        "身边",
+        "手边",
+        "拿给我",
+        "递给我"
+      ]
+    }
+  },
+  "objects": [
+    {
+      "id": "tv_remote_01",
+      "name": "电视遥控器",
+      "icon": "📺",
+      "category": "家电控制物",
+      "room": "living",
+      "location": "茶几右侧",
+      "aliases": [
+        "电视遥控器",
+        "遥控器",
+        "电视控制器"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 64,
+      "y": 45,
+      "note": "常见客厅递送物，可拿给用户",
+      "homeRoom": "living",
+      "homeLocation": "茶几右侧"
+    },
+    {
+      "id": "ac_remote_01",
+      "name": "空调遥控器",
+      "icon": "❄️",
+      "category": "家电控制物",
+      "room": "living",
+      "location": "沙发扶手旁",
+      "aliases": [
+        "空调遥控器",
+        "空调控制器",
+        "遥控器"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 28,
+      "y": 65,
+      "note": "容易与电视遥控器混淆，需要根据名称澄清",
+      "homeRoom": "living",
+      "homeLocation": "沙发扶手旁"
+    },
+    {
+      "id": "reading_glasses_01",
+      "name": "老花镜",
+      "icon": "👓",
+      "category": "个人物品",
+      "room": "living",
+      "location": "茶几左侧",
+      "aliases": [
+        "老花镜",
+        "眼镜",
+        "阅读眼镜"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 36,
+      "y": 45,
+      "note": "易碎个人物品，适合小心递送",
+      "homeRoom": "living",
+      "homeLocation": "茶几左侧"
+    },
+    {
+      "id": "tissue_box_01",
+      "name": "纸巾盒",
+      "icon": "🧻",
+      "category": "生活用品",
+      "room": "dining",
+      "location": "餐桌中央",
+      "aliases": [
+        "纸巾盒",
+        "纸巾",
+        "抽纸"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 52,
+      "y": 50,
+      "note": "可在餐桌、客厅之间移动",
+      "homeRoom": "dining",
+      "homeLocation": "餐桌中央"
+    },
+    {
+      "id": "fruit_plate_01",
+      "name": "水果盘",
+      "icon": "🍎",
+      "category": "餐桌物品",
+      "room": "dining",
+      "location": "餐桌右侧",
+      "aliases": [
+        "水果盘",
+        "果盘",
+        "水果"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 70,
+      "y": 55,
+      "note": "较大物体，移动到茶几时需更新位置",
+      "homeRoom": "dining",
+      "homeLocation": "餐桌右侧"
+    },
+    {
+      "id": "phone_charger_01",
+      "name": "手机充电器",
+      "icon": "🔌",
+      "category": "电子配件",
+      "room": "study",
+      "location": "书桌右侧",
+      "aliases": [
+        "手机充电器",
+        "充电器",
+        "充电头",
+        "数据线"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 68,
+      "y": 52,
+      "note": "电子配件，不应放在潮湿区域",
+      "homeRoom": "study",
+      "homeLocation": "书桌右侧"
+    },
+    {
+      "id": "notebook_01",
+      "name": "笔记本",
+      "icon": "📓",
+      "category": "办公用品",
+      "room": "study",
+      "location": "书桌中央",
+      "aliases": [
+        "笔记本",
+        "本子",
+        "记录本"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 50,
+      "y": 50,
+      "note": "可移动到用户或餐桌",
+      "homeRoom": "study",
+      "homeLocation": "书桌中央"
+    },
+    {
+      "id": "keychain_01",
+      "name": "钥匙串",
+      "icon": "🔑",
+      "category": "出门物品",
+      "room": "cabinet",
+      "location": "玄关柜托盘",
+      "aliases": [
+        "钥匙",
+        "钥匙串",
+        "门钥匙"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 34,
+      "y": 48,
+      "note": "出门前常见取物需求",
+      "homeRoom": "cabinet",
+      "homeLocation": "玄关柜托盘"
+    },
+    {
+      "id": "folding_umbrella_01",
+      "name": "折叠伞",
+      "icon": "☂️",
+      "category": "出门物品",
+      "room": "cabinet",
+      "location": "玄关柜下层",
+      "aliases": [
+        "折叠伞",
+        "雨伞",
+        "伞"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 58,
+      "y": 56,
+      "note": "可根据“出门/下雨”语义被拿取",
+      "homeRoom": "cabinet",
+      "homeLocation": "玄关柜下层"
+    },
+    {
+      "id": "medicine_box_01",
+      "name": "家庭药箱",
+      "icon": "🧰",
+      "category": "家庭护理物品",
+      "room": "cabinet",
+      "location": "收纳柜上层",
+      "aliases": [
+        "药箱",
+        "家庭药箱",
+        "急救箱"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 78,
+      "y": 44,
+      "note": "只作为拿取物，不涉及用药判断",
+      "homeRoom": "cabinet",
+      "homeLocation": "收纳柜上层"
+    },
+    {
+      "id": "hand_towel_01",
+      "name": "擦手毛巾",
+      "icon": "🧺",
+      "category": "卫浴用品",
+      "room": "bathroom",
+      "location": "洗漱台左侧",
+      "aliases": [
+        "毛巾",
+        "擦手毛巾",
+        "手巾"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 40,
+      "y": 54,
+      "note": "通常应归位到卫生间",
+      "homeRoom": "bathroom",
+      "homeLocation": "洗漱台左侧"
+    },
+    {
+      "id": "snack_box_01",
+      "name": "零食盒",
+      "icon": "🍪",
+      "category": "休闲物品",
+      "room": "living",
+      "location": "茶几抽屉旁",
+      "aliases": [
+        "零食盒",
+        "饼干盒",
+        "零食"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 74,
+      "y": 60,
+      "note": "可移动到餐桌或用户位置",
+      "homeRoom": "living",
+      "homeLocation": "茶几抽屉旁"
+    }
+  ]
+}

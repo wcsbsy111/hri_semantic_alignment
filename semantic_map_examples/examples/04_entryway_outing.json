@@ -1,0 +1,321 @@
+{
+  "rooms": {
+    "kitchen": {
+      "label": "厨房/操作台",
+      "aliases": [
+        "厨房",
+        "操作台",
+        "台面",
+        "水槽",
+        "饮水机"
+      ]
+    },
+    "dining": {
+      "label": "餐厅/餐桌",
+      "aliases": [
+        "餐厅",
+        "餐桌",
+        "饭桌",
+        "桌面"
+      ]
+    },
+    "living": {
+      "label": "客厅/临时放置区",
+      "aliases": [
+        "客厅",
+        "沙发",
+        "茶几",
+        "临时区"
+      ]
+    },
+    "study": {
+      "label": "书房/办公桌",
+      "aliases": [
+        "书房",
+        "办公桌",
+        "书桌",
+        "工作区"
+      ]
+    },
+    "bathroom": {
+      "label": "卫生间/洗漱台",
+      "aliases": [
+        "卫生间",
+        "洗手间",
+        "洗漱台",
+        "台盆"
+      ]
+    },
+    "cabinet": {
+      "label": "玄关/出门物品柜",
+      "aliases": [
+        "玄关",
+        "玄关柜",
+        "出门物品柜",
+        "门口柜",
+        "柜子"
+      ]
+    },
+    "user": {
+      "label": "用户位置",
+      "aliases": [
+        "我这里",
+        "我这边",
+        "用户位置",
+        "身边",
+        "手边",
+        "拿给我",
+        "递给我"
+      ]
+    }
+  },
+  "objects": [
+    {
+      "id": "house_keys_01",
+      "name": "家门钥匙",
+      "icon": "🔑",
+      "category": "出门物品",
+      "room": "cabinet",
+      "location": "玄关托盘",
+      "aliases": [
+        "钥匙",
+        "家门钥匙",
+        "门钥匙"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 28,
+      "y": 45,
+      "note": "出门前高频拿取物",
+      "homeRoom": "cabinet",
+      "homeLocation": "玄关托盘"
+    },
+    {
+      "id": "car_keys_01",
+      "name": "车钥匙",
+      "icon": "🚗",
+      "category": "出门物品",
+      "room": "cabinet",
+      "location": "玄关挂钩",
+      "aliases": [
+        "车钥匙",
+        "汽车钥匙"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 44,
+      "y": 42,
+      "note": "需要与家门钥匙区分",
+      "homeRoom": "cabinet",
+      "homeLocation": "玄关挂钩"
+    },
+    {
+      "id": "umbrella_01",
+      "name": "折叠伞",
+      "icon": "☂️",
+      "category": "出门物品",
+      "room": "cabinet",
+      "location": "玄关柜下层",
+      "aliases": [
+        "折叠伞",
+        "雨伞",
+        "伞"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 64,
+      "y": 58,
+      "note": "雨天/出门场景",
+      "homeRoom": "cabinet",
+      "homeLocation": "玄关柜下层"
+    },
+    {
+      "id": "wallet_01",
+      "name": "钱包",
+      "icon": "👛",
+      "category": "个人物品",
+      "room": "cabinet",
+      "location": "玄关抽屉",
+      "aliases": [
+        "钱包",
+        "钱夹"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 72,
+      "y": 42,
+      "note": "个人贵重物品",
+      "homeRoom": "cabinet",
+      "homeLocation": "玄关抽屉"
+    },
+    {
+      "id": "access_card_01",
+      "name": "门禁卡",
+      "icon": "💳",
+      "category": "出门物品",
+      "room": "cabinet",
+      "location": "玄关托盘右侧",
+      "aliases": [
+        "门禁卡",
+        "卡",
+        "小区卡"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 36,
+      "y": 58,
+      "note": "与其他卡片可能混淆",
+      "homeRoom": "cabinet",
+      "homeLocation": "玄关托盘右侧"
+    },
+    {
+      "id": "mask_box_01",
+      "name": "口罩盒",
+      "icon": "😷",
+      "category": "卫生用品",
+      "room": "cabinet",
+      "location": "玄关柜上层",
+      "aliases": [
+        "口罩",
+        "口罩盒"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 55,
+      "y": 36,
+      "note": "出门前拿取",
+      "homeRoom": "cabinet",
+      "homeLocation": "玄关柜上层"
+    },
+    {
+      "id": "shopping_bag_01",
+      "name": "环保购物袋",
+      "icon": "🛍️",
+      "category": "出门物品",
+      "room": "cabinet",
+      "location": "挂钩上",
+      "aliases": [
+        "购物袋",
+        "环保袋",
+        "袋子"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 82,
+      "y": 54,
+      "note": "可拿给用户",
+      "homeRoom": "cabinet",
+      "homeLocation": "挂钩上"
+    },
+    {
+      "id": "package_01",
+      "name": "待寄快递",
+      "icon": "📦",
+      "category": "包裹",
+      "room": "living",
+      "location": "茶几旁地面",
+      "aliases": [
+        "快递",
+        "包裹",
+        "待寄快递"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 30,
+      "y": 70,
+      "note": "可移动到玄关",
+      "homeRoom": "living",
+      "homeLocation": "茶几旁地面"
+    },
+    {
+      "id": "sunglasses_01",
+      "name": "太阳镜",
+      "icon": "🕶️",
+      "category": "个人物品",
+      "room": "cabinet",
+      "location": "玄关柜中层",
+      "aliases": [
+        "太阳镜",
+        "墨镜",
+        "眼镜"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 48,
+      "y": 65,
+      "note": "易碎物品",
+      "homeRoom": "cabinet",
+      "homeLocation": "玄关柜中层"
+    },
+    {
+      "id": "hat_01",
+      "name": "遮阳帽",
+      "icon": "🧢",
+      "category": "穿戴物",
+      "room": "cabinet",
+      "location": "玄关上层",
+      "aliases": [
+        "帽子",
+        "遮阳帽",
+        "鸭舌帽"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 22,
+      "y": 62,
+      "note": "出门物品",
+      "homeRoom": "cabinet",
+      "homeLocation": "玄关上层"
+    },
+    {
+      "id": "portable_powerbank_01",
+      "name": "充电宝",
+      "icon": "🔋",
+      "category": "电子配件",
+      "room": "study",
+      "location": "书桌右侧",
+      "aliases": [
+        "充电宝",
+        "移动电源"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 70,
+      "y": 52,
+      "note": "出门前可能需要从书房拿到用户",
+      "homeRoom": "study",
+      "homeLocation": "书桌右侧"
+    },
+    {
+      "id": "shoehorn_01",
+      "name": "鞋拔",
+      "icon": "🥾",
+      "category": "玄关工具",
+      "room": "cabinet",
+      "location": "门边挂钩",
+      "aliases": [
+        "鞋拔",
+        "鞋拔子"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 88,
+      "y": 70,
+      "note": "玄关固定物品，可拿给用户",
+      "homeRoom": "cabinet",
+      "homeLocation": "门边挂钩"
+    }
+  ]
+}

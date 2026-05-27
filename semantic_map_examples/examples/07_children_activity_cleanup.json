@@ -1,0 +1,325 @@
+{
+  "rooms": {
+    "kitchen": {
+      "label": "厨房/操作台",
+      "aliases": [
+        "厨房",
+        "操作台",
+        "台面",
+        "水槽",
+        "饮水机"
+      ]
+    },
+    "dining": {
+      "label": "餐桌/手工操作台",
+      "aliases": [
+        "餐桌",
+        "操作台",
+        "手工桌",
+        "桌面"
+      ]
+    },
+    "living": {
+      "label": "客厅/儿童活动区",
+      "aliases": [
+        "客厅",
+        "儿童活动区",
+        "地毯",
+        "游戏区"
+      ]
+    },
+    "study": {
+      "label": "书房/办公桌",
+      "aliases": [
+        "书房",
+        "办公桌",
+        "书桌",
+        "工作区"
+      ]
+    },
+    "bathroom": {
+      "label": "卫生间/洗漱台",
+      "aliases": [
+        "卫生间",
+        "洗手间",
+        "洗漱台",
+        "台盆"
+      ]
+    },
+    "cabinet": {
+      "label": "玩具收纳柜",
+      "aliases": [
+        "玩具柜",
+        "收纳柜",
+        "柜子",
+        "盒子"
+      ]
+    },
+    "user": {
+      "label": "用户位置",
+      "aliases": [
+        "我这里",
+        "我这边",
+        "用户位置",
+        "身边",
+        "手边",
+        "拿给我",
+        "递给我"
+      ]
+    }
+  },
+  "objects": [
+    {
+      "id": "red_block_01",
+      "name": "红色积木",
+      "icon": "🧱",
+      "category": "儿童玩具",
+      "room": "living",
+      "location": "地毯左侧",
+      "aliases": [
+        "红色积木",
+        "红积木",
+        "积木"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 34,
+      "y": 58,
+      "note": "颜色和类别可形成语义约束",
+      "homeRoom": "living",
+      "homeLocation": "地毯左侧"
+    },
+    {
+      "id": "blue_block_01",
+      "name": "蓝色积木",
+      "icon": "🧱",
+      "category": "儿童玩具",
+      "room": "living",
+      "location": "地毯右侧",
+      "aliases": [
+        "蓝色积木",
+        "蓝积木",
+        "积木"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 62,
+      "y": 58,
+      "note": "与红色积木区分",
+      "homeRoom": "living",
+      "homeLocation": "地毯右侧"
+    },
+    {
+      "id": "puzzle_piece_01",
+      "name": "拼图块",
+      "icon": "🧩",
+      "category": "儿童玩具",
+      "room": "dining",
+      "location": "手工桌中央",
+      "aliases": [
+        "拼图块",
+        "拼图",
+        "那块拼图"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 50,
+      "y": 52,
+      "note": "小物体拿取/移动",
+      "homeRoom": "dining",
+      "homeLocation": "手工桌中央"
+    },
+    {
+      "id": "crayon_box_01",
+      "name": "蜡笔盒",
+      "icon": "🖍️",
+      "category": "手工材料",
+      "room": "dining",
+      "location": "餐桌左侧",
+      "aliases": [
+        "蜡笔盒",
+        "蜡笔",
+        "彩笔"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 30,
+      "y": 48,
+      "note": "可拿给用户",
+      "homeRoom": "dining",
+      "homeLocation": "餐桌左侧"
+    },
+    {
+      "id": "sticker_sheet_01",
+      "name": "贴纸板",
+      "icon": "🏷️",
+      "category": "手工材料",
+      "room": "dining",
+      "location": "餐桌右侧",
+      "aliases": [
+        "贴纸板",
+        "贴纸",
+        "贴纸纸"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 70,
+      "y": 48,
+      "note": "与具体贴纸材料区分",
+      "homeRoom": "dining",
+      "homeLocation": "餐桌右侧"
+    },
+    {
+      "id": "safety_scissors_01",
+      "name": "儿童安全剪刀",
+      "icon": "✂️",
+      "category": "手工工具",
+      "room": "study",
+      "location": "工具盒中",
+      "aliases": [
+        "儿童剪刀",
+        "安全剪刀",
+        "剪刀"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 52,
+      "y": 52,
+      "note": "需要小心递送",
+      "homeRoom": "study",
+      "homeLocation": "工具盒中"
+    },
+    {
+      "id": "glue_stick_01",
+      "name": "固体胶",
+      "icon": "🧴",
+      "category": "手工工具",
+      "room": "study",
+      "location": "工具盒左侧",
+      "aliases": [
+        "固体胶",
+        "胶棒",
+        "胶水"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 35,
+      "y": 54,
+      "note": "手工工具",
+      "homeRoom": "study",
+      "homeLocation": "工具盒左侧"
+    },
+    {
+      "id": "toy_car_01",
+      "name": "小汽车玩具",
+      "icon": "🚗",
+      "category": "儿童玩具",
+      "room": "living",
+      "location": "沙发旁",
+      "aliases": [
+        "小汽车",
+        "汽车玩具",
+        "玩具车"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 78,
+      "y": 64,
+      "note": "可归位到玩具柜",
+      "homeRoom": "living",
+      "homeLocation": "沙发旁"
+    },
+    {
+      "id": "story_book_01",
+      "name": "绘本",
+      "icon": "📕",
+      "category": "儿童读物",
+      "room": "cabinet",
+      "location": "玩具柜上层",
+      "aliases": [
+        "绘本",
+        "故事书",
+        "图画书"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 34,
+      "y": 42,
+      "note": "可拿给用户",
+      "homeRoom": "cabinet",
+      "homeLocation": "玩具柜上层"
+    },
+    {
+      "id": "toy_storage_box_01",
+      "name": "玩具收纳盒",
+      "icon": "📦",
+      "category": "收纳容器",
+      "room": "cabinet",
+      "location": "玩具柜下层",
+      "aliases": [
+        "玩具盒",
+        "收纳盒",
+        "盒子"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 62,
+      "y": 62,
+      "note": "目标容器，可用于归位描述",
+      "homeRoom": "cabinet",
+      "homeLocation": "玩具柜下层"
+    },
+    {
+      "id": "soft_ball_01",
+      "name": "软球",
+      "icon": "⚽",
+      "category": "儿童玩具",
+      "room": "living",
+      "location": "地毯中央",
+      "aliases": [
+        "软球",
+        "球",
+        "小球"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 50,
+      "y": 70,
+      "note": "可移动到收纳柜",
+      "homeRoom": "living",
+      "homeLocation": "地毯中央"
+    },
+    {
+      "id": "color_card_01",
+      "name": "颜色卡片",
+      "icon": "🎨",
+      "category": "认知训练材料",
+      "room": "dining",
+      "location": "手工桌上方",
+      "aliases": [
+        "颜色卡片",
+        "卡片",
+        "色卡"
+      ],
+      "waterSuitable": false,
+      "hygiene": "family",
+      "temp": [],
+      "x": 50,
+      "y": 34,
+      "note": "可用于颜色识别任务",
+      "homeRoom": "dining",
+      "homeLocation": "手工桌上方"
+    }
+  ]
+}
